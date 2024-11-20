@@ -1,47 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Rock, Paper & Scissor</title>
-</head>
-
-<body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
-    </header>
-
-    <div class="score-board">
-        <div id="user-label" class="badge">User</div>
-        <div id="comp-label" class="badge">Comp</div>
-        <span id="user-score">0</span>:<span id="comp-score">0</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+      <div class="score">
+        <span>You: <span id="playerScore">0</span></span>
+        <span>Computer: <span id="computerScore">0</span></span>
+      </div>
+      <div id="result">Make your move!</div>
+      <div class="choices">
+        <button class="choice" onclick="play('rock')">🪨</button>
+        <button class="choice" onclick="play('paper')">📄</button>
+        <button class="choice" onclick="play('scissors')">✂️</button>
+      </div>
+      <button id="reset" onclick="resetGame()">Reset Game</button>
     </div>
-
-    <div class="result">
-        <p>Let's Play Rock, Paper & Scissor.</p>
-    </div>
-
-    <div class="choices">
-        <div class="choice" id="r">
-            <i class='fas fa-hand-rock'></i>
-        </div>
-        <div class="choice" id="p">
-            <i class='fas fa-hand-paper'></i>
-        </div>
-        <div class="choice" id="s">
-            <i class='fas fa-hand-peace'></i>
-        </div>
-    </div>
-
-    <p id="action-message">Make Your Move</p>
-
-</body>
-
-<script src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
